@@ -1,191 +1,80 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Triconstruction Ventures Corporation</title>
+<meta name="description" content="Triconstruction Ventures Corp. — construction materials distribution and logistics solutions across Southern Mindanao.">
+<title>Triconstruction Ventures Corp. | Construction Materials & Distribution</title>
 <style>
-:root{--navy:#10233f;--gold:#f0b33e;--light:#f5f7fa;--text:#25344a}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--text);line-height:1.7}
-header{background:var(--navy);color:white;padding:18px 7%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:15px}
-.brand{font-size:19px;font-weight:bold}
-.brand span{display:block;font-size:11px;color:var(--gold);letter-spacing:2px}
-nav{display:flex;gap:18px;flex-wrap:wrap}
-nav a{color:white;text-decoration:none;font-size:14px}
-nav a:hover{color:var(--gold)}
-.hero{background:linear-gradient(120deg,#10233f,#25496c);color:white;padding:90px 8%;text-align:left}
-.hero small{color:var(--gold);font-weight:bold;letter-spacing:3px}
-.hero h1{font-size:clamp(36px,5vw,62px);line-height:1.1;max-width:850px;margin:18px 0}
-.hero p{max-width:700px;color:#e0e8f2;font-size:18px}
-.btn{display:inline-block;background:var(--gold);color:var(--navy);padding:12px 22px;border-radius:5px;text-decoration:none;font-weight:bold;margin-top:12px}
-section{padding:65px 8%;scroll-margin-top:20px}
-section h2{font-size:32px;color:var(--navy);margin-top:0}
-.lead{max-width:850px;color:#617087}
-.light{background:var(--light)}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
-.card{background:white;padding:24px;border-radius:10px;border:1px solid #e1e6ed;box-shadow:0 5px 18px #10233f0b}
-.card h3{color:var(--navy);margin-top:0}
-.tag{color:#946400;font-weight:bold}
-ul{padding-left:22px}
-.contact{background:var(--navy);color:white}
-.contact h2{color:white}
-.contact a{color:var(--gold)}
-footer{background:#091629;color:#d6dfeb;padding:24px 8%;font-size:13px}
-@media(max-width:600px){header{padding:18px 5%}nav{gap:12px}.hero{padding:65px 6%}section{padding:48px 6%}.hero h1{font-size:38px}}
+:root{--navy:#2345ad;--navy2:#1d3c9b;--gold:#ffbf4d;--ink:#17263a;--muted:#64748b;--light:#f5f7fa;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:82px}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);line-height:1.65}
+a{color:inherit}.topbar{background:#0b1728;color:#eaf0f7;padding:8px 5%;font-size:12px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+header{position:sticky;top:0;z-index:10;background:#fff;box-shadow:0 3px 16px #10233f12;padding:14px 5%;display:flex;justify-content:space-between;align-items:center;gap:20px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;max-width:440px}.brand-logo{display:block;width:min(100%,390px);max-height:58px;object-fit:contain;object-position:left center}
+nav{display:flex;gap:22px;align-items:center;flex-wrap:wrap}nav a{text-decoration:none;font-size:13px;font-weight:bold}nav a:hover{color:#bd8410}
+.btn{display:inline-block;background:var(--gold);color:#101d30;padding:12px 18px;border-radius:30px;text-decoration:none;font-weight:bold;font-size:13px}
+.hero{background:linear-gradient(115deg,#17283e,#314b64);color:#fff;padding:90px 7% 100px;min-height:440px}.eyebrow{color:var(--gold);font-weight:800;letter-spacing:2px;text-transform:uppercase;font-size:12px}.hero h1{font-size:clamp(36px,5vw,62px);line-height:1.08;max-width:800px;margin:18px 0}.hero p{max-width:650px;color:#e1eaf3;font-size:17px}.hero .btn{margin:12px 10px 0 0}.btn.outline{background:transparent;color:#fff;border:1px solid #9eafc1}
+.stats{max-width:1100px;margin:-24px auto 0;background:#fff;border:1px solid #e1e7ef;border-radius:16px;box-shadow:0 12px 35px #10233f10;display:grid;grid-template-columns:repeat(3,1fr);position:relative}
+.stat{padding:23px 26px;border-right:1px solid #e1e7ef}.stat:last-child{border:0}.stat strong{display:block;color:var(--navy)}.stat span{font-size:13px;color:var(--muted)}
+section{padding:76px 7%}.container{max-width:1120px;margin:auto}.section-head{max-width:760px;margin-bottom:30px}.section-head h2{font-size:clamp(28px,3.5vw,40px);line-height:1.15;color:var(--navy);margin:8px 0 14px}.section-head p{color:var(--muted);margin:0}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:42px;align-items:center}.about-panel{background:var(--light);padding:30px;border-radius:18px;border-left:5px solid var(--gold)}.about-panel h3{margin-top:0;color:var(--navy)}.light{background:var(--light)}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:#fff;border:1px solid #e3e8ef;border-radius:14px;padding:24px;box-shadow:0 6px 20px #10233f08}.card h3{margin:8px 0;color:var(--navy)}.card p,.card li{color:var(--muted);font-size:14px}.icon{font-size:24px}.values{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.value{padding:18px;border-radius:12px;background:#fff;border:1px solid #e4e9ef}.value strong{display:block;color:var(--navy)}.value span{font-size:13px;color:var(--muted)}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.photo{margin:0;background:#fff;border:1px solid #e1e7ef;border-radius:14px;overflow:hidden;box-shadow:0 8px 22px #10233f0b}.photo img{display:block;width:100%;height:230px;object-fit:cover;background:#e9eef4}.photo figcaption{padding:13px 16px;font-weight:bold;color:var(--navy)}
+.partner{background:var(--navy);color:#fff;border-radius:18px;padding:30px}.partner h3{color:var(--gold);margin-top:0}.partner p{color:#e0e8f0}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}.contact-card{background:var(--navy);color:#fff;border-radius:16px;padding:28px}.contact-card h3{color:var(--gold)}.contact-card a{color:#fff}.contact-lines p{margin:10px 0}
+footer{background:#0b1728;color:#d8e2ed;padding:28px 7%;font-size:13px;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+@media(max-width:800px){.brand-logo{width:min(100%,330px);max-height:52px}header{align-items:flex-start;flex-direction:column}nav{gap:14px}.hero{padding:65px 6% 80px}.stats,.cards,.values,.gallery,.two-col,.contact-grid{grid-template-columns:1fr}.stat{border-right:0;border-bottom:1px solid #e1e7ef}.photo img{height:auto;max-height:340px}.partner{margin-top:20px}section{padding:55px 6%}}
 </style>
 </head>
 <body>
-
+<div class="topbar"><span>Southern Mindanao, Philippines</span><span>Construction Materials • Distribution • Logistics</span></div>
 <header>
-  <div class="brand">TRICONSTRUCTION VENTURES CORP.
-    <span>BUILDING STRONG FOUNDATIONS</span>
-  </div>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#vision">Vision & Mission</a>
-    <a href="#products">Products</a>
-    <a href="#maverick">Transport</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<a class="brand" href="#home"><img class="brand-logo" src="assets/triconstruction-landscape-logo.png" alt="Triconstruction Ventures Corp. logo"></a>
+<nav><a href="#about">About</a><a href="#products">Products &amp; Services</a><a href="#locations">Locations</a><a href="#contact" class="btn">Contact Us ↗</a></nav>
 </header>
-
 <main>
-<section class="hero">
-  <small>CONSTRUCTION MATERIALS · DISTRIBUTION · LOGISTICS</small>
-  <h1>Building Strong Foundations Through Reliable Distribution</h1>
-  <p>Providing construction materials and dependable distribution support to customers, contractors, hardware stores and projects across Southern Mindanao.</p>
-  <a class="btn" href="#products">Explore Our Products</a>
+<section class="hero" id="home">
+<div class="eyebrow">Building materials. Reliable partnerships.</div>
+<h1>Building strong foundations through reliable distribution.</h1>
+<p>Triconstruction Ventures Corp. supplies construction materials and dependable distribution support to customers and projects throughout Southern Mindanao.</p>
+<a class="btn" href="#products">Explore Products ↓</a><a class="btn outline" href="#contact">Get in Touch ↗</a>
 </section>
-
-<section id="about">
-  <h2>Company Overview</h2>
-  <p class="lead"><strong>Triconstruction Ventures Corporation</strong> is a construction materials distribution company headquartered in Davao City, Philippines. Incorporated in 2013, the company supplies construction materials and supports distribution operations throughout Southern Mindanao.</p>
-  <p>With industry experience and relationships with suppliers, the company serves contractors, retailers, developers and other customers. Through organized operations, customer-focused service and distribution support, Triconstruction aims to be a dependable construction supply partner.</p>
-  <div class="grid">
-    <div class="card"><h3>Established</h3><p>2013</p></div>
-    <div class="card"><h3>Main Office</h3><p>Davao City, Philippines</p></div>
-    <div class="card"><h3>Business</h3><p>Wholesale construction materials distribution</p></div>
-  </div>
-</section>
-
-<section class="light" id="vision">
-  <h2>Vision, Mission & Core Values</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>Our Vision</h3>
-      <p>To be the preferred choice for customers, investors and employees in terms of wholesale distribution, customer service, product quality and value for money.</p>
-    </div>
-    <div class="card">
-      <h3>Our Mission</h3>
-      <p>To progressively improve distribution processes by bringing in technology products and solutions, meeting market demand, adding value for vendors and resellers, supporting timely availability of goods, and developing an efficient supply chain through people training.</p>
-    </div>
-    <div class="card">
-      <h3>Our Core Values</h3>
-      <ul>
-        <li>Efficiency</li>
-        <li>Reliability</li>
-        <li>Accountability</li>
-        <li>Quality Service</li>
-        <li>Continuous Improvement</li>
-        <li>Integrity</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section id="products">
-  <h2>Products & Services</h2>
-  <p class="lead">Construction materials for hardware stores, contractors, retailers and projects.</p>
-  <div class="grid">
-    <div class="card">
-      <h3>Cement Products</h3>
-      <ul>
-        <li>Bulk cement</li>
-        <li>Tonner cement</li>
-        <li>Small bagged cement</li>
-        <li>Union Cement</li>
-        <li>Republic Cement</li>
-        <li>Cemex Philippines (Apo Cement)</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3>Construction Materials</h3>
-      <ul>
-        <li>Cement boards</li>
-        <li>Plywood products</li>
-        <li>GI sheets</li>
-        <li>Steel products</li>
-        <li>Reinforcement bars</li>
-        <li>Union Galvasteel products</li>
-        <li>Regan Industrial Sales Inc. products</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3>Distribution Support</h3>
-      <ul>
-        <li>Construction materials distribution</li>
-        <li>Warehouse distribution coordination</li>
-        <li>Order and delivery coordination</li>
-        <li>Provincial delivery support</li>
-        <li>Inventory and supply chain coordination</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section class="light">
-  <h2>Our Commitment</h2>
-  <div class="grid">
-    <div class="card"><h3>Reliable Supply</h3><p>Working to maintain inventory readiness and dependable product availability.</p></div>
-    <div class="card"><h3>Timely Deliveries</h3><p>Coordinating orders and transport requirements to support customer needs.</p></div>
-    <div class="card"><h3>Customer Service</h3><p>Building long-term partnerships through responsive support and professional service.</p></div>
-  </div>
-</section>
-
-<section id="maverick">
-  <h2>Transport & Distribution Partner</h2>
-  <div class="card">
-    <p class="tag">SISTER COMPANY</p>
-    <h3>Maverick Transpo & Distribution Inc.</h3>
-    <p>Maverick Transpo & Distribution Inc. provides transportation and logistics support that complements Triconstruction's construction materials distribution operations.</p>
-    <ul>
-      <li>Trucking and transport operations</li>
-      <li>Delivery coordination</li>
-      <li>Warehouse and distribution support</li>
-      <li>Provincial delivery logistics</li>
-    </ul>
-    <p>For delivery coverage, schedules and service availability, please contact the company directly.</p>
-  </div>
-</section>
-
-<section class="light">
-  <h2>Warehouses & Operations</h2>
-  <p class="lead">The company profile identifies operations and facilities associated with the following locations:</p>
-  <div class="grid">
-    <div class="card"><h3>Davao Sasa Warehouse</h3><p>Warehouse operations</p></div>
-    <div class="card"><h3>Kidapawan Warehouse</h3><p>Warehouse operations</p></div>
-    <div class="card"><h3>General Santos Warehouse</h3><p>Warehouse operations</p></div>
-    <div class="card"><h3>Panacan Trucking Yard</h3><p>Transport and trucking operations</p></div>
-  </div>
-</section>
-
-<section id="contact" class="contact">
-  <h2>Contact Information</h2>
-  <p><strong>Triconstruction Ventures Corporation</strong></p>
-  <p>249 Juan Dela Cruz St., Brgy. 29-C Magsaysay Avenue, Davao City</p>
-  <p>Contact: <a href="tel:+639778352900">0977-835-2900</a> / <a href="tel:+63823277020">(082) 327-7020</a></p>
-  <p>Email: <a href="mailto:concepciontara.ats@gmail.com">concepciontara.ats@gmail.com</a></p>
-  <p>For product inquiries and delivery arrangements, please contact our team.</p>
-</section>
+<div class="stats">
+<div class="stat"><strong>Established 2013</strong><span>More than a decade of industry experience</span></div>
+<div class="stat"><strong>Southern Mindanao</strong><span>Strategic warehouse and delivery support</span></div>
+<div class="stat"><strong>Distribution + Logistics</strong><span>Supported by Maverick Transpo &amp; Distribution Inc.</span></div>
+</div>
+<section id="about"><div class="container two-col">
+<div><div class="eyebrow">Who we are</div><div class="section-head"><h2>A dependable partner for construction supply.</h2><p>Headquartered in Davao City, Triconstruction Ventures Corp. has provided quality construction materials and logistics support since its incorporation in 2013. We work with suppliers and customers to support reliable product availability and timely distribution.</p></div></div>
+<div class="about-panel"><h3>Our Commitment</h3><p>We aim to maintain inventory readiness, support timely deliveries, provide dependable customer service, strengthen supplier relationships, and deliver consistent product quality.</p><p><strong>Our approach:</strong> professionalism, integrity, accountability, and continuous improvement.</p></div>
+</div></section>
+<section class="light"><div class="container"><div class="section-head"><div class="eyebrow">Our direction</div><h2>Vision, Mission &amp; Core Values</h2></div>
+<div class="two-col"><div class="card"><h3>Our Vision</h3><p>To be the preferred choice for customers, investors and employees in terms of wholesale distribution, customer service, product quality and value for money.</p></div>
+<div class="card"><h3>Our Mission</h3><p>To progressively improve distribution through technology, responsive market support, timely product availability, product knowledge, strong vendor and reseller relationships, efficient supply chains, and people training.</p></div></div>
+<div class="values" style="margin-top:18px">
+<div class="value"><strong>Efficiency</strong><span>Productivity, speed, and organized operations.</span></div><div class="value"><strong>Reliability</strong><span>Dependable delivery and fulfilled commitments.</span></div><div class="value"><strong>Accountability</strong><span>Responsibility for actions and customer satisfaction.</span></div><div class="value"><strong>Quality Service</strong><span>Professional and responsive customer support.</span></div><div class="value"><strong>Continuous Improvement</strong><span>Innovation and development of systems.</span></div><div class="value"><strong>Integrity</strong><span>Honesty, professionalism, and ethical practices.</span></div>
+</div></div></section>
+<section id="products"><div class="container"><div class="section-head"><div class="eyebrow">What we provide</div><h2>Products &amp; Services</h2><p>Construction materials and coordinated distribution services for customers across the region.</p></div>
+<div class="cards">
+<div class="card"><div class="icon">▦</div><h3>Construction Materials</h3><ul><li>Bulk, tonner, and bagged cement</li><li>Cement boards</li><li>Plywood products</li><li>GI sheets</li><li>Steel products and reinforcement bars</li></ul></div>
+<div class="card"><div class="icon">◈</div><h3>Supplier Partnerships</h3><p>Product lines include Union Cement, Republic Cement, Cemex Philippines (Apo Cement), Siam Cement Group Cement Boards, Union Galvasteel Products, and Regan Industrial Sales Inc. products.</p></div>
+<div class="card"><div class="icon">⇢</div><h3>Distribution &amp; Logistics</h3><ul><li>Delivery services</li><li>Fleet and trucking operations</li><li>Warehouse distribution</li><li>Provincial delivery support</li><li>Inventory and supply-chain coordination</li></ul></div>
+</div>
+<div class="two-col" style="margin-top:28px;align-items:stretch"><figure class="photo"><img src="assets/products-services.jpg" alt="Products and services shown in the 2026 company profile"><figcaption>Products &amp; Services</figcaption></figure><div class="partner"><h3>Maverick Transpo &amp; Distribution Inc.</h3><p>Our sister company supports logistics infrastructure, trucking, warehouse operations, and delivery coordination to help move construction materials to their destinations.</p><p><strong>Distribution and transportation support working together.</strong></p></div></div>
+</div></section>
+<section class="light" id="locations"><div class="container"><div class="section-head"><div class="eyebrow">Our facilities</div><h2>Warehouses &amp; Trucking Yard</h2><p>Facilities positioned to support distribution and deliveries across Southern Mindanao.</p></div>
+<div class="gallery">
+<figure class="photo"><img src="assets/office.jpg" alt="Triconstruction office"><figcaption>Davao City Office</figcaption></figure>
+<figure class="photo"><img src="assets/davao-sasa-warehouse.jpg" alt="Davao Sasa warehouse"><figcaption>Davao Sasa Warehouse</figcaption></figure>
+<figure class="photo"><img src="assets/kidapawan-warehouse.jpg" alt="Kidapawan warehouse"><figcaption>Kidapawan Warehouse</figcaption></figure>
+<figure class="photo"><img src="assets/gensan-warehouse.jpg" alt="General Santos warehouse"><figcaption>Gensan Warehouse</figcaption></figure>
+<figure class="photo"><img src="assets/panacan-trucking-yard.jpg" alt="Panacan trucking yard"><figcaption>Panacan Trucking Yard</figcaption></figure>
+<figure class="photo"><img src="assets/clients.jpg" alt="Client logos shown in company profile"><figcaption>Our Clients</figcaption></figure>
+</div></div></section>
+<section id="contact"><div class="container"><div class="section-head"><div class="eyebrow">Let's work together</div><h2>Contact Triconstruction Ventures Corp.</h2><p>For construction material inquiries, distribution coordination, and business partnerships, contact our Davao City office.</p></div>
+<div class="contact-grid"><div class="contact-card"><h3>Company Contact</h3><div class="contact-lines"><p>📍 249 Juan Dela Cruz St., Brgy. 29-C Magsaysay Avenue, Davao City</p><p>☎ <a href="tel:+639778352900">0977-835-2900</a> / <a href="tel:+63823277020">(082) 327-7020</a></p><p>✉ <a href="mailto:concepciontara.ats@gmail.com">concepciontara.ats@gmail.com</a></p><p>Facebook: HR Triconstruction / Triconstruction Ventures Corp.</p></div></div>
+<div class="card"><h3>Why Choose Us?</h3><p>• Over a decade of distribution experience</p><p>• Strategic warehouse locations</p><p>• Reliable trucking and warehouse teams</p><p>• Customer-focused operations</p><p>• Strong supplier partnerships</p></div></div>
+</div></section>
 </main>
-
-<footer>
-  <p>© 2026 Triconstruction Ventures Corporation. All rights reserved.</p>
-  <p>Construction Materials Distribution · Transport & Logistics Support</p>
-</footer>
-
-</body>
-</html>
+<footer><img src="assets/triconstruction-stacked-logo.png" alt="Triconstruction Ventures Corp." style="width:150px;max-height:110px;object-fit:contain;background:#fff;border-radius:8px;padding:6px"><span>© 2026 Triconstruction Ventures Corp.</span><span>Construction Materials • Distribution • Logistics</span></footer>
+</body></html>
