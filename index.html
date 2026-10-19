@@ -24,6 +24,15 @@ section{padding:76px 7%}.container{max-width:1120px;margin:auto}.section-head{ma
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}.contact-card{background:var(--navy);color:#fff;border-radius:16px;padding:28px}.contact-card h3{color:var(--gold)}.contact-card a{color:#fff}.contact-lines p{margin:10px 0}
 footer{background:#0b1728;color:#d8e2ed;padding:28px 7%;font-size:13px;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
 @media(max-width:800px){.brand-logo{width:min(100%,330px);max-height:52px}header{align-items:flex-start;flex-direction:column}nav{gap:14px}.hero{padding:65px 6% 80px}.stats,.cards,.values,.gallery,.two-col,.contact-grid{grid-template-columns:1fr}.stat{border-right:0;border-bottom:1px solid #e1e7ef}.photo img{height:auto;min-height:0;max-height:340px;object-fit:contain}.partner{margin-top:20px}section{padding:55px 6%}}
+
+.inquiry-form{display:grid;gap:12px;margin-top:18px}
+.inquiry-form label{display:block;font-weight:700;font-size:13px;margin-bottom:5px;color:var(--navy)}
+.inquiry-form input,.inquiry-form select,.inquiry-form textarea{width:100%;box-sizing:border-box;border:1px solid #d8e0eb;border-radius:8px;padding:11px 12px;font:inherit;background:#fff;color:var(--text)}
+.inquiry-form textarea{min-height:110px;resize:vertical}
+.inquiry-form button{border:0;border-radius:8px;background:var(--gold);color:#10233f;font-weight:700;padding:13px 18px;cursor:pointer}
+.inquiry-note{font-size:12px;color:#617087;margin-top:8px}
+@media(max-width:800px){.inquiry-form input,.inquiry-form select,.inquiry-form textarea{font-size:16px}}
+
 </style>
 </head>
 <body>
@@ -90,5 +99,56 @@ footer{background:#0b1728;color:#d8e2ed;padding:28px 7%;font-size:13px;display:f
 <div class="card"><h3>Why Choose Us?</h3><p>• Over a decade of distribution experience</p><p>• Strategic warehouse locations</p><p>• Reliable trucking and warehouse teams</p><p>• Customer-focused operations</p><p>• Strong supplier partnerships</p></div></div>
 </div></section>
 </main>
-<footer><img src="assets/triconstruction-stacked-logo.png" alt="Triconstruction Ventures Corp." style="width:150px;max-height:110px;object-fit:contain;background:#fff;border-radius:8px;padding:6px"><span>© 2026 Triconstruction Ventures Corp.</span><span>Construction Materials • Distribution • Logistics</span></footer>
+<footer><img src="assets/triconstruction-stacked-logo.png" alt="Triconstruction Ventures Corp." style="width:150px;max-height:110px;object-fit:contain;background:#fff;border-radius:8px;padding:6px"><span>© 2026 Triconstruction Ventures Corp.</span><span>Construction Materials • Distribution • Logistics</span>
+<section id="inquiry" class="light">
+  <div class="container">
+    <small class="eyebrow">GET IN TOUCH</small>
+    <h2>Send Us an Inquiry</h2>
+    <p class="lead">Tell us what construction materials or delivery support you need. Our team can follow up using the contact details you provide.</p>
+    <div class="grid">
+      <div class="card">
+        <form class="inquiry-form" id="inquiryForm">
+          <div><label for="inq-name">Full Name *</label><input id="inq-name" name="name" required autocomplete="name" placeholder="Your full name"></div>
+          <div><label for="inq-company">Company / Business</label><input id="inq-company" name="company" autocomplete="organization" placeholder="Your company or business name"></div>
+          <div><label for="inq-phone">Contact Number *</label><input id="inq-phone" name="phone" required autocomplete="tel" placeholder="Your contact number"></div>
+          <div><label for="inq-email">Email Address</label><input id="inq-email" name="email" type="email" autocomplete="email" placeholder="you@example.com"></div>
+          <div><label for="inq-type">Inquiry Type *</label><select id="inq-type" name="type" required><option value="">Choose an inquiry</option><option>Construction materials pricing</option><option>Cement supply</option><option>Plywood and cement boards</option><option>GI sheets and steel products</option><option>Delivery / trucking coordination</option><option>Dealer or business partnership</option><option>Other inquiry</option></select></div>
+          <div><label for="inq-location">Delivery Location</label><input id="inq-location" name="location" placeholder="City / municipality"></div>
+          <div><label for="inq-message">Message / Items Needed *</label><textarea id="inq-message" name="message" required placeholder="Please include products, quantities, and preferred delivery date if known."></textarea></div>
+          <button type="submit">Prepare Inquiry Email ↗</button>
+          <p class="inquiry-note">When you submit, your email app will open with the inquiry details ready to send. The form does not send or store information by itself.</p>
+        </form>
+      </div>
+      <div class="card">
+        <h3>Need help directly?</h3>
+        <p>Contact Triconstruction Ventures Corp. for construction material inquiries and distribution coordination.</p>
+        <p><strong>Phone:</strong> <a href="tel:09778352900">0977-835-2900</a></p>
+        <p><strong>Office:</strong> (082) 327-7020</p>
+        <p><strong>Email:</strong> <a href="mailto:concepciontara.ats@gmail.com">concepciontara.ats@gmail.com</a></p>
+        <p><strong>Logistics partner:</strong> Maverick Transpo &amp; Distribution Inc.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+document.getElementById('inquiryForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+  const form = event.currentTarget;
+  const get = (id) => document.getElementById(id).value.trim();
+  const subject = encodeURIComponent('Website Inquiry - ' + get('inq-type'));
+  const body = encodeURIComponent(
+    'Website Inquiry\n\n' +
+    'Full Name: ' + get('inq-name') + '\n' +
+    'Company / Business: ' + get('inq-company') + '\n' +
+    'Contact Number: ' + get('inq-phone') + '\n' +
+    'Email Address: ' + get('inq-email') + '\n' +
+    'Inquiry Type: ' + get('inq-type') + '\n' +
+    'Delivery Location: ' + get('inq-location') + '\n\n' +
+    'Message / Items Needed:\n' + get('inq-message')
+  );
+  window.location.href = 'mailto:concepciontara.ats@gmail.com?subject=' + subject + '&body=' + body;
+});
+</script>
+
+</footer>
 </body></html>
